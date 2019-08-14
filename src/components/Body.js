@@ -7,19 +7,28 @@ import "../App.css";
 
 function Body() {
     const [nasaData, setNasaData] = useState([]);
+    const [date, setDate] = useState("date");
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
 
     useEffect(() => {
         axios
-          .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`) // Public API
+          .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`) // Public API
           .then(response => {
             setNasaData(response.data)
-            console.log(response)
+            console.log(response.data)
           })
-      }, []);
+      }, [date]);
     return (
         <div className = "Body">
+            <button onClick={() => setDate(today)}>Click to show Photo</button>
             <PhotoBox imgUrl={nasaData.hdurl}/>
-            <TextBox title={nasaData.title} date={nasaData.date} explanation={nasaData.explanation} />
+            <TextBox title={nasaData.title} date={date} explanation={nasaData.explanation} />
         </div>
     )
 }
