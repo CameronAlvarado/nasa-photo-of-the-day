@@ -3,6 +3,7 @@ import axios from "axios";
 import PhotoBox from "./PhotoBox";
 import TextBox from "./TextBox"
 import ButtonEx from "./refactoring/ButtonEx";
+import { Segment } from 'semantic-ui-react'
 
 import "../App.css";
 
@@ -19,7 +20,7 @@ function Body() {
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=xVhenOpgYYC2GhrJGsBtztu7ypPTESAkPudiRAzu&date=${date}`) // Public API
+        .get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`) // Public API
           .then(response => {
             setNasaData(response.data)
             console.log(response.data)

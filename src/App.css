@@ -28,12 +28,13 @@
   height: auto;
 }
 
-/* .button {
-  background-color: black;
-  color: white;
-  width: 150px;
-  height: 20px;
-} */
+.button {
+border-radius: 0px;
+}
+
+.Body {
+  background-color: #1b1c1d;
+}
 
 /* .image:focus {
   transform-origin: right;
