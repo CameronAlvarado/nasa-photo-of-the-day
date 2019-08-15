@@ -6,7 +6,7 @@ function PhotoBox(props) {
     return (
         <div className = "PhotoBox">
             {/* {console.log(props)} */}
-            <img className="image" src={props.imgUrl} alt="APOD"></img>
+            <img class="ui fluid image" src={props.imgUrl} alt="APOD"></img>
         </div>
     )
 }
