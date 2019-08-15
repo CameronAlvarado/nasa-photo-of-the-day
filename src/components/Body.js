@@ -3,7 +3,6 @@ import axios from "axios";
 import PhotoBox from "./PhotoBox";
 import TextBox from "./TextBox"
 import ButtonEx from "./refactoring/ButtonEx";
-import { Segment } from 'semantic-ui-react'
 
 import "../App.css";
 

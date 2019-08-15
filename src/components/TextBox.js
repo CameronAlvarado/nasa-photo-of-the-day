@@ -10,7 +10,7 @@ function TextBox(props) {
                 <Segment inverted color='#1b1c1d' basic>
                     <h3>{props.title}</h3>
                 </Segment>
-                <Segment inverted secondary color='#1b1c1d' basic>
+                <Segment inverted color='#1b1c1d' basic>
                     <h4>{props.date}</h4>
                 </Segment>
                 <Segment inverted color='#1b1c1d'>
